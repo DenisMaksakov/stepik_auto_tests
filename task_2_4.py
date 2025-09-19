@@ -44,5 +44,12 @@ try:
     # Нажать на кнопку "Submit"
     button = browser.find_element(By.ID, "solve")
     button.click()
+
+    # Получить результат из alert
+    time.sleep(1)
+    alert = browser.switch_to.alert
+    alert_text = alert.text
+    print("Ответ:", alert_text.split()[-1])
+    alert.accept()
 except:
     pass
