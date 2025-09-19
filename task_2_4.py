@@ -15,5 +15,9 @@ try:
     # Настройки Firefox
     options = Options()
     options.headless = False
+
+    # Создаем браузер
+    browser = webdriver.Firefox(service=service, options=options)
+
 except:
     pass
