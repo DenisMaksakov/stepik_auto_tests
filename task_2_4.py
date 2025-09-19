@@ -22,5 +22,27 @@ try:
     # Открыть страницу http://suninjuly.github.io/explicit_wait2.html
     link = "http://suninjuly.github.io/explicit_wait2.html"
     browser.get(link)
+
+    # Дождаться, когда цена дома уменьшится до $100
+    WebDriverWait(browser, 15).until(
+        EC.text_to_be_present_in_element((By.ID, "price"), "$100")
+    )
+
+    # Нажать на кнопку "Book"
+    button = browser.find_element(By.ID, "book")
+    button.click()
+
+    # Решить математическую задачу
+    value = browser.find_element(By.ID, "input_value").text
+    value = int(value)
+    result = str(log(abs(12 * sin(value))))
+
+    # Ввести ответ
+    answer = browser.find_element(By.ID, "answer")
+    answer.send_keys(result)
+
+    # Нажать на кнопку "Submit"
+    button = browser.find_element(By.ID, "solve")
+    button.click()
 except:
     pass
