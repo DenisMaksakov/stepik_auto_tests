@@ -52,4 +52,5 @@ try:
     print("Ответ:", alert_text.split()[-1])
     alert.accept()
 except:
-    pass
+    time.sleep(2)
+    browser.quit()
