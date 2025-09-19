@@ -20,7 +20,7 @@ try:
     browser = webdriver.Firefox(service=service, options=options)
 
     # Открыть страницу http://suninjuly.github.io/explicit_wait2.html
-    link = "123http://suninjuly.github.io/explicit_wait2.html"
+    link = "http://suninjuly.github.io/explicit_wait2.html"
     browser.get(link)
 except:
     pass
