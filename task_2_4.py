@@ -11,5 +11,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 try:
     # Автоматическая установка драйвера
     service = Service(GeckoDriverManager().install())
+
+    # Настройки Firefox
+    options = Options()
+    options.headless = False
 except:
     pass
